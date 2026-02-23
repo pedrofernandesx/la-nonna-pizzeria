@@ -1,7 +1,9 @@
 # 🍕 La Nonna Pizzeria 🍕
 > Uma experiência de pedido online imersiva, interativa e totalmente funcional.
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/d29abef0-bf39-4e94-bc8c-ec6219cafdba" />
+<img width="1080" height="1091" alt="Design sem nome (1)" src="https://github.com/user-attachments/assets/0c77b6cc-95ef-4c49-9ca0-1af8abc9e3d8" />
+
+
 
 Este projeto é uma landing page de alta conversão desenvolvida para pizzarias artesanais, focada em **Mobile-First UX** e **Performance**. O sistema permite que o usuário monte sua pizza de forma dinâmica, com validações em tempo real e fechamento de pedido via WhatsApp.
 
@@ -15,7 +17,8 @@ Este projeto é uma landing page de alta conversão desenvolvida para pizzarias 
   - Alternância inteligente entre "Entrega" e "Retirada na Loja".
 - **🎨 UI de Alta Fidelidade:** Uso de imagens sangradas (bleed), tipografia moderna (`Pacifico` e `Poppins`) e micro-interações táteis.
 
-- ## 🛠️ Tecnologias Utilizadas
+
+ ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5 Semântico:** Para melhor acessibilidade e SEO.
 - **CSS3 Moderno:** Flexbox, CSS Grid, Variáveis (Custom Properties) e Animações `@keyframes`.
