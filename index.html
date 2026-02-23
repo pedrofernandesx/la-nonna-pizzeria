@@ -1,225 +1,227 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Mamma | Pedido Online</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Nonna | Pedido Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#home" class="logo">La Nonna <i class="fas fa-pizza-slice"></i></a>
+      <button class="menu-icon" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
 
-    <!-- NAV -->
-    <nav>
-        <div class="container nav-container">
-            <a href="#" class="logo">La Mamma <i class="fas fa-pizza-slice"></i></a>
-            <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><button onclick="openModal()" class="btn-nav">Fazer Pedido</button></li>
-            </ul>
-            <div class="menu-icon"><i class="fas fa-bars"></i></div>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <header id="home">
-        <div class="hero-content">
-            <span class="badge">Forno a Lenha</span>
-          <h1>Pizza artesanal<br>do forno pra sua casa</h1>
-                <p>Forno a lenha, ingredientes frescos e massa de verdade.</p>
-            <div class="hero-btns">
-                <button onclick="openModal()" class="btn-primary">Pedir Agora</button>
-            </div>
-        </div>
-    </header>
-
-    <!-- CARDÁPIO -->
-    <section id="cardapio" class="menu-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nosso Cardápio</h2>
-                <p>Clique abaixo para montar a sua</p>
-            </div>
-
-            <div class="builder-cta">
-                <button class="btn-builder" onclick="openModal()">
-                    <i class="fas fa-utensils"></i> Fazer Pedido
-                </button>
-            </div>
-
-            <!-- Grid Exemplo -->
-            <div class="menu-grid">
-                <div class="pizza-card">
-                    <div class="pizza-img">
-                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80" alt="Calabresa">
-                        <span class="price">R$ 45,90</span>
-                    </div>
-                    <div class="pizza-info">
-                        <h3>Calabresa</h3>
-                        <button class="btn-order" onclick="openModal()">Pedir</button>
-                    </div>
-                </div>
-                <div class="pizza-card">
-                    <div class="pizza-img">
-                        <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=800&q=80" alt="Margherita">
-                        <span class="price">R$ 45,90</span>
-                    </div>
-                    <div class="pizza-info">
-                        <h3>Margherita</h3>
-                        <button class="btn-order" onclick="openModal()">Pedir</button>
-                    </div>
-                </div>
-                <div class="pizza-card">
-                    <div class="pizza-img">
-                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80" alt="Portuguesa">
-                        <span class="price">R$ 52,90</span>
-                    </div>
-                    <div class="pizza-info">
-                        <h3>Portuguesa</h3>
-                        <button class="btn-order" onclick="openModal()">Pedir</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MODAL DE PEDIDO COMPLETO -->
-    <div id="pizzaModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Novo Pedido</h3>
-                <span class="close-modal" onclick="closeModal()">&times;</span>
-            </div>
-
-            <div class="modal-body">
-                
-                <!-- 1. Tamanho -->
-                <div class="section-block">
-                    <h4>1. Tamanho</h4>
-                    <div class="size-list">
-                        <div class="size-item" onclick="selectSize(this, 45, 1, 'Broto (4 Fatias)')">
-                            <div class="size-icon"><i class="fas fa-circle"></i></div>
-                            <div class="size-info">
-                                <strong>BROTO (4 FATIAS)</strong>
-                                <span>1 Sabor</span>
-                            </div>
-                            <span class="price">R$ 45,00</span>
-                        </div>
-                        <div class="size-item" onclick="selectSize(this, 59, 2, 'Média (8 Fatias)')">
-                            <div class="size-icon"><i class="fas fa-adjust"></i></div>
-                            <div class="size-info">
-                                <strong>MÉDIA (8 FATIAS)</strong>
-                                <span>Até 2 Sabores</span>
-                            </div>
-                            <span class="price">R$ 59,00</span>
-                        </div>
-                        <div class="size-item" onclick="selectSize(this, 80, 3, 'Grande (12 Fatias)')">
-                            <div class="size-info">
-                                <strong>GRANDE (12 FATIAS)</strong>
-                                <span>Até 3 Sabores</span>
-                            </div>
-                            <span class="price">R$ 80,00</span>
-                        </div>
-                        <div class="size-item" onclick="selectSize(this, 105, 4, 'GG (16 Fatias)')">
-                            <div class="size-icon"><i class="fas fa-bullseye"></i></div>
-                            <div class="size-info">
-                                <strong>GIGANTE (16 FATIAS)</strong>
-                                <span>Até 4 Sabores</span>
-                            </div>
-                            <span class="price">R$ 105,00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Sabores -->
-                <div id="flavor-section" class="section-block disabled-section">
-                    <h4>2. Sabores <span id="flavor-counter" class="counter-badge">0/0</span></h4>
-                    <div class="flavor-grid">
-                        <div class="flavor-card" onclick="toggleFlavor(this, 'Calabresa')">
-                            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300&q=80" alt="Calabresa">
-                            <div class="flavor-name">Calabresa</div>
-                        </div>
-                        <div class="flavor-card" onclick="toggleFlavor(this, 'Bacon')">
-                            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=300&q=80" alt="Bacon">
-                            <div class="flavor-name">Bacon</div>
-                        </div>
-                        <div class="flavor-card" onclick="toggleFlavor(this, '4 Queijos')">
-                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300&q=80" alt="4 Queijos">
-                            <div class="flavor-name">4 Queijos</div>
-                        </div>
-                        <!-- IMAGEM DO FRANGO CORRIGIDA AQUI -->
-                        <div class="flavor-card" onclick="toggleFlavor(this, 'Frango Catupiry')">
-                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&q=80" alt="Frango">
-                            <div class="flavor-name">Frango</div>
-                        </div>
-                        <div class="flavor-card" onclick="toggleFlavor(this, 'Margherita')">
-                            <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=300&q=80" alt="Margherita">
-                            <div class="flavor-name">Margherita</div>
-                        </div>
-                        <div class="flavor-card" onclick="toggleFlavor(this, 'Portuguesa')">
-                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&q=80" alt="Portuguesa">
-                            <div class="flavor-name">Portuguesa</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Entrega e Pagamento -->
-                <div class="section-block">
-                    <h4>3. Finalização</h4>
-                    
-                    <!-- Tipo de Entrega -->
-                    <p class="label-text">Modo de Entrega:</p>
-                    <div class="delivery-toggle">
-                        <div class="toggle-option active" id="opt-delivery" onclick="setDeliveryMode('delivery')">
-                            <i class="fas fa-motorcycle"></i> Entrega
-                        </div>
-                        <div class="toggle-option" id="opt-pickup" onclick="setDeliveryMode('pickup')">
-                            <i class="fas fa-store"></i> Retirada
-                        </div>
-                    </div>
-
-                    <!-- Endereço (Aparece só se for entrega) -->
-                    <div id="address-box">
-                        <p class="label-text">Endereço:</p>
-                        <input type="text" id="address-input" placeholder="Rua, Número, Bairro...">
-                    </div>
-
-                    <!-- Pagamento -->
-                    <p class="label-text">Forma de Pagamento:</p>
-                    <div class="payment-grid">
-                        <div class="pay-card" onclick="selectPayment(this, 'Cartão Crédito')">
-                            <i class="far fa-credit-card"></i> Crédito
-                        </div>
-                        <div class="pay-card" onclick="selectPayment(this, 'Cartão Débito')">
-                            <i class="fas fa-credit-card"></i> Débito
-                        </div>
-                        <div class="pay-card" onclick="selectPayment(this, 'Dinheiro')">
-                            <i class="fas fa-money-bill-wave"></i> Dinheiro
-                        </div>
-                        <div class="pay-card" onclick="selectPayment(this, 'Pix')">
-                            <i class="fas fa-qrcode"></i> Pix
-                        </div>
-                    </div>
-
-                    <!-- Obs -->
-                    <p class="label-text" style="margin-top: 15px;">Observações:</p>
-                    <textarea id="obs-text" placeholder="Ex: Tirar cebola..."></textarea>
-                </div>
-
-            </div>
-
-            <div class="modal-footer">
-                <div class="total-price">
-                    <small>Total a Pagar</small>
-                    <span id="total-display">R$ 0,00</span>
-                </div>
-                <button class="btn-finish" onclick="finishOrder()">Concluir Pedido</button>
-            </div>
-        </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><button type="button" onclick="openModal()" class="btn-nav">Fazer Pedido</button></li>
+      </ul>
     </div>
+  </nav>
 
-    <script src="script.js"></script>
+  <!-- HERO -->
+  <header id="home">
+    <div class="hero-content">
+      <span class="badge">Forno a Lenha</span>
+      <h1>Pizza artesanal<br>do forno pra sua casa</h1>
+      <p>Ingredientes frescos, massa de verdade e aquele cheirinho que hipnotiza.</p>
+      <div class="hero-btns">
+        <button type="button" onclick="openModal()" class="btn-primary">Pedir Agora</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CARDÁPIO -->
+  <section id="cardapio" class="menu-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nosso Cardápio</h2>
+        <p>Clique abaixo para montar a sua</p>
+      </div>
+      <div class="builder-cta">
+        <button type="button" class="btn-builder" onclick="openModal()">
+          <i class="fas fa-utensils"></i> Fazer Pedido
+        </button>
+      </div>
+
+      <!-- Cards com imagem sangrada -->
+      <div class="menu-grid">
+        <div class="pizza-card bleed">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1200&q=85" alt="Calabresa">
+          <div class="pizza-overlay">
+            <div class="pizza-top">
+              <h3>Calabresa</h3>
+              <span class="price-tag">A partir de R$ 45,00</span>
+            </div>
+            <button type="button" class="btn-order-bleed" onclick="openModal()">Pedir</button>
+          </div>
+        </div>
+
+        <div class="pizza-card bleed">
+          <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=1200&q=85" alt="Margherita">
+          <div class="pizza-overlay">
+            <div class="pizza-top">
+              <h3>Margherita</h3>
+              <span class="price-tag">A partir de R$ 45,00</span>
+            </div>
+            <button type="button" class="btn-order-bleed" onclick="openModal()">Pedir</button>
+          </div>
+        </div>
+
+        <div class="pizza-card bleed">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&q=85" alt="Portuguesa">
+          <div class="pizza-overlay">
+            <div class="pizza-top">
+              <h3>Portuguesa</h3>
+              <span class="price-tag">A partir de R$ 45,00</span>
+            </div>
+            <button type="button" class="btn-order-bleed" onclick="openModal()">Pedir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="pizzaModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Novo Pedido</h3>
+        <button type="button" class="close-modal" aria-label="Fechar" onclick="closeModal()">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- 1. Tamanho -->
+        <div class="section-block" id="size-section">
+          <h4>1. Tamanho</h4>
+          <div class="size-list">
+            <div class="size-item" onclick="selectSize(this, 45, 1, 'Broto (4 Fatias)')">
+              <div class="size-icon"><i class="fas fa-circle"></i></div>
+              <div class="size-info">
+                <strong>BROTO (4 FATIAS)</strong>
+                <span>1 Sabor</span>
+              </div>
+              <span class="price-inline">R$ 45,00</span>
+            </div>
+            <div class="size-item" onclick="selectSize(this, 59, 2, 'Média (8 Fatias)')">
+              <div class="size-icon"><i class="fas fa-adjust"></i></div>
+              <div class="size-info">
+                <strong>MÉDIA (8 FATIAS)</strong>
+                <span>Até 2 Sabores</span>
+              </div>
+              <span class="price-inline">R$ 59,00</span>
+            </div>
+            <div class="size-item" onclick="selectSize(this, 80, 3, 'Grande (12 Fatias)')">
+              <div class="size-icon"><i class="fas fa-bullseye"></i></div>
+              <div class="size-info">
+                <strong>GRANDE (12 FATIAS)</strong>
+                <span>Até 3 Sabores</span>
+              </div>
+              <span class="price-inline">R$ 80,00</span>
+            </div>
+            <div class="size-item" onclick="selectSize(this, 105, 4, 'GG (16 Fatias)')">
+              <div class="size-icon"><i class="fas fa-bullseye"></i></div>
+              <div class="size-info">
+                <strong>GIGANTE (16 FATIAS)</strong>
+                <span>Até 4 Sabores</span>
+              </div>
+              <span class="price-inline">R$ 105,00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sabores -->
+        <div id="flavor-section" class="section-block disabled-section">
+          <div class="section-head">
+            <h4>2. Sabores</h4>
+            <span id="flavor-counter" class="counter-badge">0/0</span>
+          </div>
+          <div class="flavor-grid">
+            <div class="flavor-card" onclick="toggleFlavor(this, 'Calabresa')">
+              <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=85" alt="Calabresa">
+              <div class="flavor-name">Calabresa</div>
+            </div>
+            <div class="flavor-card" onclick="toggleFlavor(this, 'Bacon')">
+              <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=600&q=85" alt="Bacon">
+              <div class="flavor-name">Bacon</div>
+            </div>
+            <div class="flavor-card" onclick="toggleFlavor(this, '4 Queijos')">
+              <img src="https://s2-receitas.glbimg.com/SNnnOIl92uii5_Dg5JtCydNmrOU=/600x0/filters:quality(50)/https://i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2024/V/2/rafz5yTJuSiHGDoolkpg/pizza-de-4-queijos.jpg" alt="4 Queijos">
+              <div class="flavor-name">4 Queijos</div>
+            </div>
+            <div class="flavor-card" onclick="toggleFlavor(this, 'Frango Catupiry')">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=85" alt="Frango">
+              <div class="flavor-name">Frango</div>
+            </div>
+            <div class="flavor-card" onclick="toggleFlavor(this, 'Margherita')">
+              <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=600&q=85" alt="Margherita">
+              <div class="flavor-name">Margherita</div>
+            </div>
+            <div class="flavor-card" onclick="toggleFlavor(this, 'Portuguesa')">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=85" alt="Portuguesa">
+              <div class="flavor-name">Portuguesa</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Finalização -->
+        <div class="section-block" id="final-section">
+          <h4>3. Finalização</h4>
+          <p class="label-text">Modo de Entrega:</p>
+          <div class="delivery-toggle">
+            <div class="toggle-option active" id="opt-delivery" onclick="setDeliveryMode('delivery')">
+              <i class="fas fa-motorcycle"></i> Entrega
+            </div>
+            <div class="toggle-option" id="opt-pickup" onclick="setDeliveryMode('pickup')">
+              <i class="fas fa-store"></i> Retirada
+            </div>
+          </div>
+
+          <div id="address-box">
+            <p class="label-text">Endereço:</p>
+            <input type="text" id="address-input" placeholder="Rua, Número, Bairro..." autocomplete="street-address">
+          </div>
+
+          <p class="label-text">Forma de Pagamento:</p>
+          <div class="payment-grid">
+            <div class="pay-card" onclick="selectPayment(this, 'Cartão Crédito')">
+              <i class="far fa-credit-card"></i> Crédito
+            </div>
+            <div class="pay-card" onclick="selectPayment(this, 'Cartão Débito')">
+              <i class="fas fa-credit-card"></i> Débito
+            </div>
+            <div class="pay-card" onclick="selectPayment(this, 'Dinheiro')">
+              <i class="fas fa-money-bill-wave"></i> Dinheiro
+            </div>
+            <div class="pay-card" onclick="selectPayment(this, 'Pix')">
+              <i class="fas fa-qrcode"></i> Pix
+            </div>
+          </div>
+
+          <p class="label-text" style="margin-top: 15px;">Observações:</p>
+          <textarea id="obs-text" placeholder="Ex: Tirar cebola..."></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="total-price">
+          <small>Total a Pagar</small>
+          <span id="total-display">R$ 0,00</span>
+        </div>
+        <button type="button" class="btn-finish" onclick="finishOrder()">Concluir Pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
