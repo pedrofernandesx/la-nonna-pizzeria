@@ -1,42 +1,31 @@
-# 🍕 La Mamma Pizzeria 🍕
+# 🍕 La Nonna Pizzeria 🍕
+> Uma experiência de pedido online imersiva, interativa e totalmente funcional.
 
-> Uma experiência de pedido online imersiva e interativa.
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/d29abef0-bf39-4e94-bc8c-ec6219cafdba" />
 
-Este é um projeto fictício de uma landing page para pizzaria, focado em conversão e experiência do usuário (UX). O diferencial é o sistema de **Montagem de Pedido** via modal, simulando a funcionalidade de aplicativos de delivery.
+Este projeto é uma landing page de alta conversão desenvolvida para pizzarias artesanais, focada em **Mobile-First UX** e **Performance**. O sistema permite que o usuário monte sua pizza de forma dinâmica, com validações em tempo real e fechamento de pedido via WhatsApp.
 
-## 🎯 Funcionalidades Principais
-- **Pizza Builder Interativo:**
-  - Escolha de tamanho (4, 8, 12 ou 16 fatias).
-  - Lógica de limite de sabores (ex: Pizza média aceita até 2 sabores).
-  - Feedback visual de seleção.
-  
-- **Checkout Simulado:**
-  - Alternância entre "Entrega" e "Retirada" (esconde campos de endereço).
-  - Seleção de método de pagamento.
-  - Cálculo automático do valor total em tempo real.
+- **✅ Integração Real com WhatsApp:** Gera uma mensagem estruturada com todos os dados do pedido (sabores, endereço, pagamento e total).
+- **🍕 Pizza Builder Dinâmico:** 
+  - Lógica de limite de sabores baseada no tamanho (ex: Broto permite 1 sabor, GG permite até 4).
+  - Feedback visual de erro com animações de "Shake" ao exceder limites.
+  - Atualização automática de preço e contadores.
+- **🛒 Checkout Otimizado (Thumb Zone):** 
+  - Interface adaptada para uso com uma única mão.
+  - Alternância inteligente entre "Entrega" e "Retirada na Loja".
+- **🎨 UI de Alta Fidelidade:** Uso de imagens sangradas (bleed), tipografia moderna (`Pacifico` e `Poppins`) e micro-interações táteis.
 
-- **Design Responsivo:**
-  - Layout *Mobile-First*.
-  - Hero Section imersiva (100vh).
-  - Cards de produtos modernos.
+- ## 🛠️ Tecnologias Utilizadas
 
-## 🛠️ Tecnologias Utilizadas
-- **HTML5 Semântico:** Estrutura limpa e acessível.
-- **CSS3 Moderno:** Flexbox, Grid Layout, Variáveis CSS e Animações.
-- **JavaScript (Vanilla):** Manipulação de DOM e lógica de estado sem frameworks.
+- **HTML5 Semântico:** Para melhor acessibilidade e SEO.
+- **CSS3 Moderno:** Flexbox, CSS Grid, Variáveis (Custom Properties) e Animações `@keyframes`.
+- **JavaScript (Vanilla):** Lógica de estado complexa e manipulação de DOM sem dependências externas.
 
-## 🧠 Desafios & Aprendizados
-O maior desafio foi criar a lógica do modal sem usar frameworks como React ou Vue. 
-- Utilizei **Arrays** para gerenciar os sabores selecionados.
-- Implementei validações condicionais (`if/else`) para impedir que o usuário selecione mais sabores do que o tamanho permite.
-- Manipulação de classes CSS (`classList.add/remove`) para dar feedback instantâneo ao usuário.
+## 🧠 Desafios Técnicos & Soluções
 
-## 📌 Próximos Passos
+O maior desafio foi criar um fluxo de montagem de pedido que fosse simples, mas seguro:
+- **Estado Síncrono:** Desenvolvi uma lógica em JS para monitorar as escolhas do usuário e refletir instantaneamente no UI, garantindo que o valor final nunca esteja errado.
+- **Feedback de Erro (UX):** Implementei o efeito "Shake Deny" no modal, proporcionando uma comunicação clara e moderna com o usuário, sem interromper a navegação com pop-ups irritantes.
 
-- [ ] Integrar com API do WhatsApp para enviar o pedido real.
-- [ ] Adicionar modo Dark/Light.
-- [ ] Criar animações de entrada (Fade-in) ao rolar a página.
-
----
-
-Desenvolvido por **Pedro Fernandes** para fins de estudo e portfólio. 🚀
+- ---
+Desenvolvido por **Pedro Fernandes** como demonstração de habilidades avançadas em Front-end Moderno. 🚀
