@@ -31,4 +31,4 @@ O maior desafio foi criar um fluxo de montagem de pedido que fosse simples, mas 
 - **Feedback de Erro (UX):** Implementei o efeito "Shake Deny" no modal, proporcionando uma comunicação clara e moderna com o usuário, sem interromper a navegação com pop-ups irritantes.
 
 - ---
-Desenvolvido por **Pedro Fernandes** como demonstração de habilidades avançadas em Front-end Moderno. 🚀
+Desenvolvido por **Pedro Fernandes** 🚀
