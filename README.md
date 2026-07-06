@@ -3,7 +3,7 @@
 
 <img width="1080" height="1091" alt="Design sem nome (1)" src="https://github.com/user-attachments/assets/0c77b6cc-95ef-4c49-9ca0-1af8abc9e3d8" />
 
-veja aqui: la-nonna-pizzeria.vercel.app
+*SITE PARA CONFERIR O PROJETO ONLINE: la-nonna-pizzeria.vercel.app
 
 Este projeto é uma landing page de alta conversão desenvolvida para pizzarias artesanais, focada em **Mobile-First UX** e **Performance**. O sistema permite que o usuário monte sua pizza de forma dinâmica, com validações em tempo real e fechamento de pedido via WhatsApp.
 
